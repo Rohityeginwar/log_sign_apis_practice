@@ -1,0 +1,38 @@
+header{
+    width:100%;
+    height:100px;
+    background:red;
+}
+
+#profileImage{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    background-color:grey;
+    float:left;
+    margin-top: 1%;
+    margin-left:1%;
+} 
+
+.profileName{
+    float:left;
+    font-size:30px;
+    margin-top: 1%;
+    margin-left:1%;
+}
+
+
+.floatRight{
+    float:right;
+    margin-right: 2%;
+    margin-top: 1%;
+} 
+/*pages*/
+form{
+    width:40%;
+    margin-left: 33%;
+}
+form .btn{
+    margin-left:50%;
+}
+

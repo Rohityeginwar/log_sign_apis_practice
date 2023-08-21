@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <link href="page.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="page.js"></script>
+    </head>
+    <body>
+        <header>
+            <div id= "profileImage">
+                <img src="" rel="image" />
+            </div>
+            <span class="profileName">
+                profile
+            </span>
+            <button class="btn btn-primary floatRight">SignUP</button>
+            <button class="btn btn-primary floatRight">Login</button>
+        </header>
+        <hr/>
+        <!--SIGNUP PAGE-->
+        <form>
+            <div class="panel-body ">
+                <div class="form-group" id="Name">
+                    <label for="Name" class="control-label">Name</label>
+                    <input id="Name" class="form-control" name="Name" >
+                </div>
+            </div>
+            <div class="panel-body ">
+                <div class="form-group" id="email">
+                    <label for="email" class="control-label">E-mail ID</label>
+                    <input id="emailid" class="form-control" name="mail">
+                </div>
+            </div>
+            <div class="panel-body ">
+                <div class="form-group" id="password">
+                    <label for="password" class="control-label">Password</label>
+                    <input id="password" class="form-control" name="password" type="password" oninput="validatpass()">
+                    <p id="out"></p>
+                </div>
+            </div>
+            <button class="btn btn-success" onClick="Register()">Signup</button>
+        </form>
+        <hr/>
+        <!--Login page-->
+        <form>
+            <div class="panel-body">
+                <div class="form-group" id="email">
+                    <label for="email" class="cotrol-label" >E-mail ID</label>
+                    <input for="email" class="form-control" id="email">
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="form-group" id="password">
+                    <label class="control-table" for="password">Password</label>
+                    <input class="form-control" name="password" id="password" type="password">
+                </div>
+            </div>
+            <button class="btn btn-success">Login</button>
+        </form>
+    </body>
+</html>
