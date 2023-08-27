@@ -1,6 +1,6 @@
-// let mongo = require ('mongodb');
-// let{MongoClient} = require('mongodb')
-// let mongoUrl ="mongodb+srv://rohitdeveloper:IlCpS76zgiO9IFgB@cluster0.ivcxuxo.mongodb.net/?retryWrites=true&w=majority";
+let mongo = require ('mongodb');
+let{MongoClient} = require('mongodb')
+let mongoUrl ="mongodb+srv://rohitdeveloper:IlCpS76zgiO9IFgB@cluster0.ivcxuxo.mongodb.net/?retryWrites=true&w=majority";
 const mongoose = require ('mongoose')
 
 const List = new mongoose.Schema({
@@ -9,29 +9,30 @@ const List = new mongoose.Schema({
     password : String,
 })
 const listModel = mongoose.model('RegisterList',List)
-// let client = new MongoClient(mongoUrl , List);
+
+let client = new MongoClient(mongoUrl , List);
  
-// async function dbConnect(){
-//     await client.connect()
-// }
+async function dbConnect(){
+    await client.connect()
+}
 
-// let db = client.db('RegisterList')
+let db = client.db('RegisterList')
 
 
-// async function getData(colName,query){
-//     let output = [];
-//     try{
-//         const cursor = db.collection(colName).find(query);
-//         for  await  (const data of  cursor){
-//             output.push(data)
-//         }
-//         cursor.closed
-//     }
-//     catch(err){
-//         output.push({"Error" : "Error in get data"})
-//     }
-//     return output
-// }
+async function getData(colName,query){
+    let output = [];
+    try{
+        const cursor = db.collection(colName).find(query);
+        for  await  (const data of  cursor){
+            output.push(data)
+        }
+        cursor.closed
+    }
+    catch(err){
+        output.push({"Error" : "Error in get data"})
+    }
+    return output
+}
 
 
 
