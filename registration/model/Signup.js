@@ -27,7 +27,7 @@ let registerSchema =  new mongoose.Schema({
     }
 })
 
-let RegisterModel = new mongoose.model("student" , registerSchema)
+let RegisterModel = new mongoose.model("students" , registerSchema)
 
 
 module.exports = RegisterModel 
